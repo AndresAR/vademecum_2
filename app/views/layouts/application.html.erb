@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vademecum2</title>
+  <title>Vademecum</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="ui fixed inverted menu">
+		<div class="ui container">
+			<a href="#" class="header item">
+				<i class="doctor icon"></i>
+				Vademecum
+			</a>
+		</div>
+	</div>
+	<div class="ui main text container">
+		<%= yield %>
+	</div>
 
-<%= yield %>
-
+	<div class="ui inverted vertical footer segment">
+		<div class="ui center aligned container">
+			<div class="ui horizontal inverted small divided link list">
+				<a class="item" href="#">Contactanos</a>
+				<a class="item" href="#">Terminos y Condiciones</a>
+			</div>
+		</div>	
+	</div>
 </body>
 </html>
